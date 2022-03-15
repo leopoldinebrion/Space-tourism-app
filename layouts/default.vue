@@ -2,6 +2,9 @@
   <div class="app">
     <div class="nav">
       <div class="logo"><img src="@/assets/shared/logo.svg" alt="Logo" /></div>
+        <div class="mobile_menu">
+          <img src="../assets/shared/icon-hamburger.svg" alt="icon menu" @click="toggleMenu" />
+        </div>
         <ul class="links">
           <li>
             <NuxtLink to="/"><span>00</span> HOME</NuxtLink>
@@ -16,9 +19,6 @@
             <NuxtLink to="/technology"><span>03</span> TECHNOLOGY</NuxtLink>
           </li>
         </ul>
-        <div class="icon">
-          <img src="../assets/shared/icon-hamburger.svg" alt="icon menu" @click="toggleMenu" />
-        </div>
     </div>
     <Nuxt />
   </div>
@@ -43,19 +43,48 @@
   letter-spacing: 1.8px;
   font-size: 16px;
   padding: 0 48px 0 48px;
+  transition: all .5s ease;
   li {
       padding: 39px 0 39px 0;
+      &:hover {
+        border-bottom: 3px solid #fff
+      }
   }
 }
 
 .nuxt-link-exact-active {
-    border-bottom: 2px solid white;    
+    border-bottom: 3px solid white;    
     padding: 39px 0 39px 0;
 }
+
+.mobile_menu {
+  display: none;
+}
+
+span {
+  font-weight: 700;
+  margin-right: 0.5em;
+}
+
+// tab
 
 @media (max-width: 990px) {
   span {
     display: none;
   }
 }
+
+
+// mobile
+
+@media (max-width: 780px) {
+  .mobile_menu {
+    display: inline-block;
+    margin-right: 2rem;
+  }
+  .links {
+    display: none;
+  }
+}
+
 </style>
