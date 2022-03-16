@@ -9,8 +9,8 @@
                 outer space and not hover kind of on the edge of it. Well sit back, and relax 
                 because we’ll give you a truly out of this world experience!</p>
             </div>
-            <div>
-                <a href="#" class="large-button uppercase ff-serif text-dark bg-white">Explore</a>
+            <div class="explore">
+                <a href="#" class="explore__btn">Explore</a>
             </div>
         </div>
     </div>
@@ -68,5 +68,19 @@
         line-height: 1.4em;
     }
 
+    .explore__btn {
+        position: relative;
+        background-color: white;
+        color: black;
+        border-radius: 50%;
+        width: 16rem;
+        height: 16rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        font-family: 'Bellefair', serif;
+        text-transform: uppercase;
+    }
 </style>
 
