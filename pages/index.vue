@@ -10,7 +10,7 @@
                 because we’ll give you a truly out of this world experience!</p>
             </div>
             <div class="explore">
-                <a href="#" class="explore__btn">Explore</a>
+                <NuxtLink to="/destination" class="explore__btn">Explore</NuxtLink>
             </div>
         </div>
     </div>
@@ -81,6 +81,10 @@
         font-size: 2rem;
         font-family: 'Bellefair', serif;
         text-transform: uppercase;
+        transition: outline 0.3s ease-in;
+        &:hover {
+            outline: 2rem solid rgba(255, 255, 255, 0.1);
+        }
     }
 </style>
 

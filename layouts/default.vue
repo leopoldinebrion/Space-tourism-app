@@ -46,16 +46,30 @@
   transition: all .5s ease;
   li {
       padding: 39px 0 39px 0;
-      &:hover {
-        border-bottom: 3px solid #fff
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        left: 0;
+        bottom: -1px;
+        opacity: 0;
+        transform: translateX(-100%);
+        transition: 0.2s;
       }
+      &:hover::after {
+        background-color: #fff;
+        opacity: 1;
+        transform: translateX(0);
+      }
+      &.nuxt-link-exact-active::after {
+        background-color: #fff;
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
   }
-}
-
-.nuxt-link-exact-active {
-    border-bottom: 3px solid white;    
-    padding: 39px 0 39px 0;
-}
 
 .mobile_menu {
   display: none;
