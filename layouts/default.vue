@@ -2,9 +2,6 @@
   <div class="app">
     <div class="nav">
       <div class="logo"><img src="@/assets/shared/logo.svg" alt="Logo" /></div>
-        <div class="mobile_menu">
-          <img src="../assets/shared/icon-hamburger.svg" alt="icon menu" @click="toggleMenu" />
-        </div>
         <ul class="links">
           <li>
             <NuxtLink to="/"><span>00</span> HOME</NuxtLink>
@@ -19,10 +16,44 @@
             <NuxtLink to="/technology"><span>03</span> TECHNOLOGY</NuxtLink>
           </li>
         </ul>
+        <div class="mobile_menu" @click="toggleMenu = true">
+          <img src="../assets/shared/icon-hamburger.svg" alt="icon mobile menu" />
+        </div>
+        <div v-if="toggleMenu">
+          <div @click="toggleMenu = false">
+            <img src="../assets/shared/icon-close.svg" alt="close mobile menu">
+          </div>
+            <ul>
+            <li>
+              <NuxtLink to="/"><span>00</span> HOME</NuxtLink>
+            </li>
+            <li>
+              <NuxtLink to="/destination"><span>01</span> DESTINATION</NuxtLink>
+            </li>
+            <li>
+              <NuxtLink to="/crew"><span>02</span> CREW</NuxtLink>
+            </li>
+            <li>
+              <NuxtLink to="/technology"><span>03</span> TECHNOLOGY</NuxtLink>
+            </li>
+          </ul>
+        </div>
     </div>
     <Nuxt />
   </div>
 </template>
+
+<script>
+
+export default {
+  data() {
+    return {
+      toggleMenu: false;
+    }
+  }
+}
+</script>
+
 
 <style lang="scss">
 
@@ -63,13 +94,13 @@
         opacity: 1;
         transform: translateX(0);
       }
-      &.nuxt-link-exact-active::after {
-        background-color: #fff;
-        opacity: 1;
-        transform: translateX(0);
-      }
     }
   }
+
+  // .nuxt-link-exact-active {
+  //       border-bottom: 3px solid white;
+  //       padding-top: 5px;
+  //     }
 
 .mobile_menu {
   display: none;

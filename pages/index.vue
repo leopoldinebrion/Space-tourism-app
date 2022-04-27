@@ -19,7 +19,7 @@
 <style scoped lang="scss">
 
     .home {
-        margin-top: 6rem;
+        margin-top: 10rem;
     }
 
     .home__img {
@@ -84,6 +84,22 @@
         transition: outline 0.3s ease-in;
         &:hover {
             outline: 2rem solid rgba(255, 255, 255, 0.1);
+        }
+    }
+
+    @media (max-width: 1092px) {
+        .home__grid {
+            display: flex;
+            flex-direction: column;
+        }
+        .explore {
+            margin-top: 50px;
+        }
+    }
+
+    @media (max-width: 424px) {
+        .home__content {
+            padding: 124px 24px 0 24px;
         }
     }
 </style>
