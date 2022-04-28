@@ -16,13 +16,11 @@
             <NuxtLink to="/technology"><span>03</span> TECHNOLOGY</NuxtLink>
           </li>
         </ul>
-        <div class="mobile_menu" @click="toggleMenu = true">
+        <div class="mobile__menu" @click="toggleMenu = true">
           <img src="../assets/shared/icon-hamburger.svg" alt="icon mobile menu" />
         </div>
-        <div v-if="toggleMenu">
-          <div @click="toggleMenu = false">
-            <img src="../assets/shared/icon-close.svg" alt="close mobile menu">
-          </div>
+        <div v-if="toggleMenu" class="mobile__menu-item">
+            <img  @click="toggleMenu = false" src="../assets/shared/icon-close.svg" alt="close mobile menu">
             <ul>
             <li>
               <NuxtLink to="/"><span>00</span> HOME</NuxtLink>
@@ -48,12 +46,12 @@
 export default {
   data() {
     return {
-      toggleMenu: false;
+      toggleMenu: false,
     }
   }
 }
-</script>
 
+</script>
 
 <style lang="scss">
 
@@ -111,6 +109,31 @@ span {
   margin-right: 0.5em;
 }
 
+ .mobile__menu-item {
+  backdrop-filter: blur(1.5rem);
+  transition: transform 0.15s ease-in;
+  position: fixed;
+  width: 250px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  img {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+  }
+  }
+
+
+@media (min-width: 780px) {
+  .mobile__menu {
+    display: none;
+  }
+}
 // tab
 
 @media (max-width: 990px) {
@@ -123,7 +146,7 @@ span {
 // mobile
 
 @media (max-width: 780px) {
-  .mobile_menu {
+  .mobile__menu {
     display: inline-block;
     margin-right: 2rem;
   }
