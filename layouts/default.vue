@@ -4,16 +4,16 @@
       <div class="logo"><img src="@/assets/shared/logo.svg" alt="Logo" /></div>
         <ul class="links">
           <li>
-            <NuxtLink to="/"><span>00</span> HOME</NuxtLink>
+            <NuxtLink to="/"><span class="number">00</span> HOME</NuxtLink>
           </li>
           <li>
-            <NuxtLink to="/destination"><span>01</span> DESTINATION</NuxtLink>
+            <NuxtLink to="/destination"><span class="number">01</span> DESTINATION</NuxtLink>
           </li>
           <li>
-            <NuxtLink to="/crew"><span>02</span> CREW</NuxtLink>
+            <NuxtLink to="/crew"><span class="number">02</span> CREW</NuxtLink>
           </li>
           <li>
-            <NuxtLink to="/technology"><span>03</span> TECHNOLOGY</NuxtLink>
+            <NuxtLink to="/technology"><span class="number">03</span> TECHNOLOGY</NuxtLink>
           </li>
         </ul>
         <div class="mobile__menu" @click="toggleMenu = true">
@@ -22,18 +22,18 @@
         <div v-if="toggleMenu" class="mobile__menu-item">
             <img  @click="toggleMenu = false" src="../assets/shared/icon-close.svg" alt="close mobile menu">
             <ul>
-            <li>
-              <NuxtLink to="/"><span>00</span> HOME</NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="/destination"><span>01</span> DESTINATION</NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="/crew"><span>02</span> CREW</NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="/technology"><span>03</span> TECHNOLOGY</NuxtLink>
-            </li>
+              <li>
+                <NuxtLink to="/"><span>00</span> HOME</NuxtLink>
+              </li>
+              <li>
+                <NuxtLink to="/destination"><span>01</span> DESTINATION</NuxtLink>
+              </li>
+              <li>
+                <NuxtLink to="/crew"><span>02</span> CREW</NuxtLink>
+              </li>
+              <li>
+                <NuxtLink to="/technology"><span>03</span> TECHNOLOGY</NuxtLink>
+              </li>
           </ul>
         </div>
     </div>
@@ -126,7 +126,11 @@ span {
     top: 30px;
     right: 30px;
   }
-  }
+}
+
+img {
+  cursor: pointer;
+}
 
 
 @media (min-width: 780px) {
@@ -137,7 +141,7 @@ span {
 // tab
 
 @media (max-width: 990px) {
-  span {
+  .number {
     display: none;
   }
 }
@@ -152,6 +156,13 @@ span {
   }
   .links {
     display: none;
+  }
+
+  li {
+    padding: 0 0 20px 0;
+    a {
+      letter-spacing: 1.5px;
+    }
   }
 }
 
