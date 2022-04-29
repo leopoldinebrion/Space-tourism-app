@@ -95,10 +95,15 @@ export default {
     }
   }
 
-  // .nuxt-link-exact-active {
-  //       border-bottom: 3px solid white;
-  //       padding-top: 5px;
-  //     }
+  .nuxt-link-exact-active::after {
+        content: "";
+        width: 100%;
+        height: 3px;
+        background-color: #fff;
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+      }
 
 .mobile_menu {
   display: none;
@@ -140,7 +145,7 @@ img {
 }
 // tab
 
-@media (max-width: 990px) {
+@media (max-width: 1090px) {
   .number {
     display: none;
   }
