@@ -1,38 +1,37 @@
 <template>
     <div class="destination">
-        <div class="destination__img"></div>
-        <!-- <div class="destination__container">
-            <h1><span>01</span> pick your destination</h1> -->
-    <div class="page-content" v-if="destinations"> 
-      <aside class="item-content">
-        <div class="page-menu">
-          <span :class="index === 0 ? 'selected' : ''" @click="index = 0"
-            >moon</span
-          >
-          <span :class="index === 1 ? 'selected' : ''" @click="index = 1"
-            >mars</span
-          >
-          <span :class="index === 2 ? 'selected' : ''" @click="index = 2"
-            >europa</span
-          >
-          <span :class="index === 3 ? 'selected' : ''" @click="index = 3"
-            >titan</span
-          >
-        </div>
-        <h1 class="item-name">{{ destinations[index].name }}</h1>
-        <p class="item-description">{{ destinations[index].description }}</p>
-        <div class="item-info">
-          <div class="item-distance">
-            <h4>avg. distance</h4>
-            <span>{{ destinations[index].distance }}</span>
-          </div>
-          <div class="item-travel">
-            <h4>est. travel time</h4>
-            <span>{{ destinations[index].travel }}</span>
-          </div>
-        </div>
-      </aside>
-    </div>
+	<div class="destination__img"></div>
+	<div class="destination__container">
+		<div class="title"><span class="number">01</span> pick your destination</div>
+		<div class="destination__content" v-if="destinations">
+            <div class="destination__planet-img">
+				<!-- <img :src="destinations[index].images.png" alt="destinations[index].name"> -->
+                <img src="../assets/destination/image-moon.png" alt="">
+			</div>
+            <div class="text">
+                <div class="destination__nav">
+                    <span :class="index === 0 ? 'selected' : ''" @click="index = 0">moon</span>
+                    <span :class="index === 1 ? 'selected' : ''" @click="index = 1">mars</span>
+                    <span :class="index === 2 ? 'selected' : ''" @click="index = 2">europa</span>
+                    <span :class="index === 3 ? 'selected' : ''" @click="index = 3">titan</span>
+                </div>
+                <h2 class="destination__name">{{ destinations[index].name }}</h2>
+                <p class="destination__description">
+                    {{ destinations[index].description }}
+                </p>
+                <div class="destination__info">
+                    <div class="destination__distance">
+                        <h4>avg. distance</h4>
+                        <span>{{ destinations[index].distance }}</span>
+                    </div>
+                    <div class="destination__travel">
+                        <h4>est. travel time</h4>
+                        <span>{{ destinations[index].travel }}</span>
+                    </div>
+                </div>
+            </div>
+		</div>
+	</div>
 </div>
 </template>
 
@@ -51,37 +50,32 @@ export default {
   },
 };
 </script>
-            <!-- <div class="content">
-                <img :src="require(`@/assets/${destinations[index].images.png}`)">
-            </div>
-        </div>
-    </div>
-</template>
 
-<script>
-
-import data from "../assets/data.json"
-
-export default {
-
-    data() {
-        return {
-            destinations: null,
-            index: 0,
-        }
-    },
-
-    mounted() {
-        this.destinations = data.destinations;
-    }
-}
-
-</script> -->
 
 <style scoped lang="scss">
 
     .destination {
         margin-top: 10rem;
+        padding: 0 60px 0 80px;
+        &__description {
+            line-height: 27px;
+            margin-bottom: 30px;
+            text-align: justify;
+        }
+    }
+
+    .destination__nav {
+        cursor: pointer;
+    }
+
+    h2 {
+        font-family: "Bellefair", serif;
+        font-size: 100px;
+        font-weight: 100;
+    }
+
+    .number {
+        color: #ffffff40;
     }
 
     .destination__img {
@@ -104,8 +98,37 @@ export default {
         }
     }
 
-    h1 {
+    .title {
+        margin-bottom: 4rem;
+        font-size: 28px;
+        letter-spacing: 4.2px;
+    }
+
+    .title, .destination__name, span, .destination__distance, .destination__travel {
         text-transform: uppercase;
+    }
+
+    .destination__content {
+        display: flex;
+    }
+
+    .destination__nav {
+        display: flex;
+        grid-gap: 30px;
+        gap: 30px;
+    }
+
+    .destination__info {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .destination__name {
+        margin: 25px 0 25px 0;
+    }
+    .text {
+        margin-left: 45px;
+        width: 350px;
     }
 
 </style>

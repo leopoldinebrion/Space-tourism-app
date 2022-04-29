@@ -109,7 +109,7 @@ export default {
   display: none;
 }
 
-span {
+.number {
   font-weight: 700;
   margin-right: 0.5em;
 }
