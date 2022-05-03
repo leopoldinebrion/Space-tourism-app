@@ -6,7 +6,7 @@
 		<div class="destination__content" v-if="destinations">
             <div class="destination__planet-img">
 				<!-- <img :src="destinations[index].images.png" alt="destinations[index].name"> -->
-                <img src="../assets/destination/image-moon.png" alt="">
+                <img :src="require(`@/assets/${destinations[index].images.png}`)">
 			</div>
             <div class="text">
                 <div class="destination__nav">
@@ -110,6 +110,7 @@ export default {
 
     .destination__content {
         display: flex;
+        justify-content: space-evenly;
     }
 
     .destination__nav {
@@ -127,7 +128,6 @@ export default {
         margin: 25px 0 25px 0;
     }
     .text {
-        margin-left: 45px;
         width: 350px;
     }
 
