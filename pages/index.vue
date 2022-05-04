@@ -3,7 +3,7 @@
         <div class="home__img"><img src="../assets/home/background-home-desktop.jpg" alt=""></div>
         <div class="home__grid">
             <div class="home__content">
-                <h3>So, you want to travel to</h3>
+                <p class="subtitle">So, you want to travel to</p>
                 <h1>Space</h1>
                 <p>Let’s face it; if you want to go to space, you might as well genuinely go to 
                 outer space and not hover kind of on the edge of it. Well sit back, and relax 
@@ -49,14 +49,7 @@
         padding: 2rem;
     }
 
-    h1 {
-        font-family: 'Bellefair', serif;
-        text-transform: uppercase;
-        font-weight: 200;
-        font-size: 9rem;
-    }
-
-    h3 {
+    .subtitle {
         font-size: 1.6rem;
         font-weight: 100;
         line-height: 1em;
