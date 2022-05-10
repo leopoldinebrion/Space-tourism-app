@@ -45,6 +45,7 @@ export default {
       destinations: null,
     };
   },
+  
   mounted() {
     this.destinations = data.destinations;
   },
@@ -66,17 +67,14 @@ export default {
         width: 100%;
         z-index: -1000;
         &__container {
-            margin-top: 80px;
+            margin-top: 40px;
+            max-width: 85%;
         }
         &__description {
             line-height: 27px;
             margin-bottom: 30px;
             text-align: justify;
         }
-    }
-
-    .destination__nav {
-        cursor: pointer;
     }
 
     // .destination__img {
@@ -100,16 +98,8 @@ export default {
     //     }
     // }
 
-    .title {
-        margin-bottom: 4rem;
-        font-size: 28px;
-        letter-spacing: 4.2px;
-        &__number {
-            color: #ffffff40;
-        }
-    }
 
-    .title, .destination__name, span, .destination__distance, .destination__travel {
+    .destination__name, span, .destination__distance, .destination__travel {
         text-transform: uppercase;
     }
 
@@ -123,7 +113,20 @@ export default {
         display: flex;
         grid-gap: 30px;
         gap: 30px;
+        span {
+            cursor: pointer;
+        }
     }
+
+    .selected::after {
+    display: block;
+    content: " ";
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    padding-bottom: 7px;
+    border-bottom: 3.5px solid white;
+}
 
     .destination__info {
         display: flex;
@@ -137,6 +140,7 @@ export default {
     .destination__name {
         margin: 25px 0 25px 0;
     }
+
     .text {
         width: 350px;
     }
@@ -153,6 +157,9 @@ export default {
             display: flex;
             flex-direction: column;
             align-items: center;
+        }
+        .destination__container {
+            margin-top: 60px;
         }
         .text {
             margin-top: 40px;
