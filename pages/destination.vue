@@ -68,7 +68,6 @@ export default {
         z-index: -1000;
         &__container {
             margin-top: 40px;
-            max-width: 85%;
         }
         &__description {
             line-height: 27px;

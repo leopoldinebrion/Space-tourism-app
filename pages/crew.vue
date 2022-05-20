@@ -48,6 +48,7 @@ export default {
     this.crew = data.crew;
   },
 };
+
 </script>
 
 <style scoped lang="scss">
@@ -77,7 +78,7 @@ export default {
   grid-gap: 130px;
   margin-top: -120px;
   @media (max-width: 991px) {
-      flex-direction: column;
+      flex-direction: column-reverse;
       justify-content: center;
       text-align: center;
       gap: 40px;
@@ -103,7 +104,12 @@ export default {
 }
 
 .text {
-  max-width: 350px;
+  max-width: 430px;
+  @media (max-width: 991px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .crew__nav {
@@ -125,6 +131,10 @@ export default {
 }
 .crew__nav span:hover {
   background-color: rgba(255, 255, 255, 0.445);
+}
+
+img {
+  max-width: 100%;
 }
 
 </style>

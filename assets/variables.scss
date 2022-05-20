@@ -1,60 +1,69 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
 
 * {
-    font-family: 'Barlow Condensed', sans-serif;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    color: white;
+  font-family: 'Barlow Condensed', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: white;
 }
 
 body {
-    font-size: 18px;
+  font-size: 18px;
 }
 .app {
-    min-height: 100vh;
+  min-height: 100vh;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
-h1, h2, h3, h4, .subtitle2 {
-    font-family: 'Bellefair', serif;
-    text-transform: uppercase;
+h1,
+h2,
+h3,
+h4,
+.subtitle2 {
+  font-family: 'Bellefair', serif;
+  text-transform: uppercase;
 }
 
 h1 {
-    font-weight: 200;
-    font-size: 9rem;
+  font-weight: 200;
+  font-size: 9rem;
 }
 
 h2 {
-    font-size: 100px;
-    font-weight: 100;
+  font-size: 100px;
+  font-weight: 100;
 }
 
 h3 {
-    font-size: 3rem;
-    font-weight: 100;
+  font-size: 3rem;
+  font-weight: 100;
 }
 
 h4 {
-    font-size: 1.6rem;
-    font-weight: 100;
-    color: rgba(255, 255, 255, 0.5);
+  font-size: 1.6rem;
+  font-weight: 100;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .title {
-    margin-bottom: 4rem;
-    font-size: 28px;
-    letter-spacing: 4.2px;
-    text-transform: uppercase;
-    &__number {
-        color: #ffffff40;
+  margin-bottom: 4rem;
+  margin-left: 15px;
+  font-size: 28px;
+  letter-spacing: 4.2px;
+  text-transform: uppercase;
+  &__number {
+    color: #ffffff40;
+  }
+  @media (max-width: 575px) {
+    font-size: 18px;
+    text-align: center;
     }
 }

@@ -1,6 +1,6 @@
 <template>
     <div class="home">
-        <div class="home__img"><img src="../assets/home/background-home-desktop.jpg" alt=""></div>
+        <img src="../assets/home/background-home-desktop.jpg" alt="">
         <div class="home__grid">
             <div class="home__content">
                 <p class="subtitle">So, you want to travel to</p>
@@ -17,37 +17,66 @@
 </template>
 
 <style scoped lang="scss">
+ 
+ img { 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    /* Préserve le ratio de l'image */
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1000;
+    background-position: center;
+    background-size: cover;
+    }
 
     .home {
-        margin-top: 10rem;
-    }
-
-    .home__img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 900px;
-        z-index: -1;
-        object-fit: cover;
-        img {
-            width: 100%;
-            height: 100%;
+    //     background-size: cover;
+    //     background-position: center;
+    //     background-attachment: fixed;
+        padding: 12% 10% 10%;
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     z-index: -1000;
+        &__grid {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-left: 165px;
+            padding-right: 165px;
+            gap: 80px;
         }
     }
+
+    // .home__img {
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 900px;
+    //     z-index: -1;
+    //     object-fit: cover;
+    //     img {
+    //         width: 100%;
+    //         height: 100%;
+    //     }
+    // }
 
     .home__content {
         width: 420px;
         text-align: justify;
     }
 
-    .home__grid {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin: 0 8rem;
-        padding: 2rem;
-    }
+    // .home__grid {
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: space-between;
+    //     margin-top: 10rem;
+    //     margin: 0 8rem;
+    //     padding: 2rem;
+    // }
 
     .subtitle {
         font-size: 1.6rem;
@@ -87,6 +116,9 @@
         }
         .explore {
             margin-top: 50px;
+        }
+        .home__content {
+            text-align: center;
         }
     }
 
