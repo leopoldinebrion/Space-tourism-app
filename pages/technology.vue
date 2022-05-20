@@ -112,6 +112,11 @@ export default {
   letter-spacing: 2.7px;
 }
 
+.name {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .description {
   line-height: 27px;
   margin-bottom: 30px;
@@ -148,6 +153,10 @@ export default {
   .technology__nav {
     display: flex;
     flex-direction: row;
+  }
+
+  .text {
+    padding: 0 25px;
   }
 }
 
