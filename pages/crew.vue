@@ -2,28 +2,28 @@
   <div class="crew">
     <div class="crew__container">
       <div class="title"><span class="title__number">02</span> meet your crew</div>
-      <div class="crew__content">
+      <div class="crew__content" v-if="crew">
         <div class="text">
-          <h4 class="role">{{ crew[index].role }}</h4>
-          <h3 class="name">{{ crew[index].name }}</h3>
-          <p class="bio">{{ crew[index].bio }}</p>
+          <h4 class="role">{{ crew[i].role }}</h4>
+          <h3 class="name">{{ crew[i].name }}</h3>
+          <p class="bio">{{ crew[i].bio }}</p>
           <div class="crew__nav">
             <span
-              @click="activeIndex" data-index="0" class="selected"
+              @click="selectedIndex(0)" class="selected points"
             ></span>
             <span
-              @click="activeIndex" data-index="1"
+              @click="selectedIndex(1)" class="points"
             ></span>
             <span
-              @click="activeIndex" data-index="2"
+              @click="selectedIndex(2)" class="points"
             ></span>
             <span
-              @click="activeIndex" data-index="3"
+              @click="selectedIndex(3)" class="points"
             ></span>
           </div>
         </div>
         <div class="crew__img">
-          <img :src="require(`@/assets/${crew[index].images.png}`)">
+          <img :src="require(`@/assets/${crew[i].images.png}`)">
         </div>  
       </div>
     </div>
@@ -36,20 +36,25 @@ import data from "../assets/data.json";
 export default {
   data() {
     return {
-      crew: data.crew,
-      index: 0,
+      crew: [],
+      i: 0,
     };
   },
 
-  methods: {
-    activeIndex(e) {
-      this.index = e.target.getAttribute('data-index')
-      document
-        .querySelectorAll('span')
-        .forEach((ele) => ele.classList.remove('selected'))
-      e.target.classList.add('selected')
-    }
-  }
+ methods: {
+    selectedIndex(index) {
+      console.log(index)
+      let points = document.querySelectorAll('.points')
+      points.forEach((active) => {
+        active.classList.remove('selected')
+      })
+      points[index].classList.add('selected')
+      this.i = index
+    },
+  },
+  created() {
+    this.crew = data.crew;
+  },
 };
 
 </script>
@@ -79,13 +84,6 @@ export default {
   margin-top: -120px;
 }
 
-// .crew__img {
-//   position: absolute;
-//   bottom: 0;
-//   right: 195px;
-//   top: 67px;
-// }
-
 .role, .name {
   margin-bottom: 18px;
 }
@@ -112,10 +110,11 @@ export default {
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.205);
   margin: 0 0.7rem;
+  cursor: pointer;
 }
 
 .selected {
-  background-color: rgb(255, 255, 255) !important;
+  background-color: white !important;
 }
 
 .crew__nav span:hover {
