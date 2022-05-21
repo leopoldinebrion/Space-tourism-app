@@ -41,7 +41,7 @@ export default {
 </script>
 
 
-<style lang="scss">
+<style scoped lang="scss">
 
 .technology {
     background-image: url("../assets/technology/background-technology-desktop.jpg");

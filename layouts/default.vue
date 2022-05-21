@@ -44,6 +44,13 @@
 <script>
 
 export default {
+
+  watch: {
+    '$route' () {
+      this.toggleMenu = false;
+    }
+  },
+
   data() {
     return {
       toggleMenu: false,
@@ -128,7 +135,7 @@ export default {
   padding-left: 30px;
   img {
     position: absolute;
-    top: 30px;
+    top: 50px;
     right: 30px;
   }
 }
