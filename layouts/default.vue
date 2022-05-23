@@ -80,6 +80,17 @@ export default {
   font-size: 16px;
   padding: 0 85px;
   transition: all .5s ease;
+  &::after {
+    position: absolute;
+    content: "";
+    background-color: rgba(255,255,255,0.44314);
+    top: 50%;
+    right: 97%;
+    width: 50%;
+    height: 1px;
+    transform: translateY(-50%);
+    z-index: 1000;  
+  }
   li {
       padding: 39px 0 39px 0;
       position: relative;
@@ -175,6 +186,10 @@ img {
     a {
       letter-spacing: 1.5px;
     }
+  }
+
+  .line {
+    display: none;
   }
 }
 
