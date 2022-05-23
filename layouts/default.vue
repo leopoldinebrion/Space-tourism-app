@@ -75,10 +75,10 @@ export default {
   justify-content: space-between;
   width: 60%;
   background-color: #ffffff0d;
-  backdrop-filter: blur(1.5rem);
+  backdrop-filter: blur(6px);
   letter-spacing: 1.8px;
   font-size: 16px;
-  padding: 0 48px 0 48px;
+  padding: 0 85px;
   transition: all .5s ease;
   li {
       padding: 39px 0 39px 0;
