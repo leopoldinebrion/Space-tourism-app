@@ -34,8 +34,16 @@ export default {
     '@nuxtjs/stylelint-module',
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
+    '@nuxtjs/google-fonts'
   ],
 
+  googleFonts: {
+    families: {
+      Barlow: true,
+      'Barlow+Condensed': true,
+      Bellefair: true,
+    },
+  },
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [],
 
