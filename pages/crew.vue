@@ -43,13 +43,12 @@ export default {
 
  methods: {
     selectedIndex(index) {
-      console.log(index)
       let points = document.querySelectorAll('.points')
       points.forEach((active) => {
         active.classList.remove('selected')
       })
       points[index].classList.add('selected')
-      this.i = index
+      this.i = index;
     },
   },
   created() {
@@ -106,10 +105,10 @@ export default {
 .crew__nav span {
   position: relative;
   width: 13px;
-  aspect-ratio: 1;
+  height: 13px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.205);
-  margin: 0 0.7rem;
+  background-color: #ffffff34;
+  margin: 0 10px;
   cursor: pointer;
 }
 
@@ -118,7 +117,7 @@ export default {
 }
 
 .crew__nav span:hover {
-  background-color: rgba(255, 255, 255, 0.445);
+  background-color: #ffffff71;
 }
 
 img {

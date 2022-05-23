@@ -84,14 +84,14 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid hsla(0,0%,100%,.25);
+    border: 1px solid #ffffff40;
     transition: .2s;
 }
 .technology__nav span:hover {
-  border: 1px solid rgb(255, 255, 255);
+  border: 1px solid #ffffff;
 }
 .selected {
-  background-color: white;
+  background-color: #ffffff;
   color: black;
 }
 
