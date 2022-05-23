@@ -5,8 +5,7 @@
             <div class="title"><span class="title__number">01</span> pick your destination</div>
             <div class="destination__content" v-if="destinations">
                 <div class="destination__planet-img">
-                    <!-- <img :src="destinations[index].images.png" alt="destinations[index].name"> -->
-                    <img :src="require(`@/assets/${destinations[index].images.png}`)">
+                    <img :src="require(`@/assets/${destinations[index].images.png}`)" alt="destinations[index].name">
                 </div>
                 <div class="text">
                     <div class="destination__nav">
