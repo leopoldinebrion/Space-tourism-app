@@ -64,7 +64,6 @@ export default {
         top: 0;
         left: 0;
         width: 100%;
-        z-index: -1000;
         &__container {
             margin-top: 40px;
         }

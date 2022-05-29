@@ -4,7 +4,7 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - space-tourism-app',
-    title: 'space-tourism-app',
+    title: 'Space tourism',
     htmlAttrs: {
       lang: 'en',
     },
