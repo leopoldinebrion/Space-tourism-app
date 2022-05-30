@@ -22,7 +22,6 @@
     position: fixed; 
     top: 0; 
     left: 0; 
-    /* Préserve le ratio de l'image */
     min-width: 100%;
     min-height: 100%;
     z-index: -1000;

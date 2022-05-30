@@ -1,5 +1,6 @@
 <template>
     <div class="technology">
+        <img class="technology__background" src="../assets/technology/background-technology-desktop.jpg" alt="">
         <div class="technology__container">
             <div class="title"><span class="title__number">03</span> space launch 101</div>
             <div class="technology__content" v-if="technology">
@@ -43,17 +44,19 @@ export default {
 
 <style scoped lang="scss">
 
+.technology__background { 
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  background-position: center;
+  background-size: cover;
+}
+
 .technology {
-    background-image: url("../assets/technology/background-technology-desktop.jpg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    padding: 12% 0 10% 10%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: -1;
+    padding: 10% 0 10% 10%;
     &__container {
         margin-top: 40px;
     }

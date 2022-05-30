@@ -1,6 +1,6 @@
 <template>
     <div class="destination">
-        <!-- <div class="destination__img"></div> -->
+        <img class="destination__background" src="../assets/destination/background-destination-desktop.jpg" alt="">
         <div class="destination__container">
             <div class="title"><span class="title__number">01</span> pick your destination</div>
             <div class="destination__content" v-if="destinations">
@@ -54,16 +54,19 @@ export default {
 
 <style scoped lang="scss">
 
-    .destination {
-        background-image: url("../assets/destination/background-destination-desktop.jpg");
-        background-size: cover;
+    .destination__background { 
+        position: fixed; 
+        top: 0; 
+        left: 0; 
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
         background-position: center;
-        background-attachment: fixed;
-        padding: 12% 10% 10%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
+        background-size: cover;
+    }
+
+    .destination {
+        padding: 10% 10% 10%;
         &__container {
             margin-top: 40px;
         }

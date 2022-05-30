@@ -1,5 +1,6 @@
 <template>
   <div class="crew">
+    <img class="crew__background" src="../assets/crew/background-crew-desktop.jpg" alt="">
     <div class="crew__container">
       <div class="title"><span class="title__number">02</span> meet your crew</div>
       <div class="crew__content" v-if="crew">
@@ -60,17 +61,19 @@ export default {
 
 <style scoped lang="scss">
 
+.crew__background { 
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  background-position: center;
+  background-size: cover;
+}
+
 .crew {
-    background-image: url("../assets/crew/background-crew-desktop.jpg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    padding: 12% 10% 10%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: -1;
+    padding: 10% 10% 10%;
     &__container {
       margin-top: 40px;
     }
